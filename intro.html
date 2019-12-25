@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Start</title>
+    <script>
+      var mail = {
+        sender: "",
+        receiver: "",
+        subject: "",
+        message: ""
+      };
+      function sendMail(object) {
+        return { sender: object.sender, message: object.message };
+        // return object.message;
+      }
+      var roj = sendMail({ sender: "Rojesh", message: "Hello Bitch" });
+      console.log("roj>>", roj.message);
+    </script>
+  </head>
+  <body>
+    <!-- <button onclick="sendMail()">Click me</button> -->
+  </body>
+</html>
