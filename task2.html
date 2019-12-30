@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Task2</title>
+    <script>
+      function addition(int1) {
+        function inner(int2) {
+          var result = int1 + int2;
+          console.log("result>>", result);
+        }
+        return inner;
+      }
+      addition(3)(35);
+    </script>
+  </head>
+  <body></body>
+</html>
