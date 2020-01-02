@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <script>
+
+      function askMoney(amt) {
+        var a = new Promise(function(resolve,reject){
+
+
+                      console.log('dad told me to wait for few days');
+                    setTimeout(function() {
+                          console.log('dad gets his money ');
+                          resolve(amt);
+                      }, 2000);
+
+                  })
+                  return a;
+
+                  function buyPhone(model) {
+
+                  return new Promise(function(resolve,reject){
+                  	console.log('i am at mobile shop and shopkeeper told me to come again at eveening');
+                  	 setTimeout(function() {
+                          console.log('phone arrives at shop');
+                          resolve(model);
+                      }, 2000);
+                  	})
+                  	}
+
+                  function takePhoto() {
+                  	return promise(function(resolve,reject){
+                  		    console.log('taking photos');
+                      setTimeout(function() {
+                       resolve('photo');
+
+                      }, 2000)
+
+                  	})
+                  }
+                     function edit() {
+                  	return promise(function(resolve,reject){
+                  		 console.log('start editing');
+                      setTimeout(function() {
+                          console.log('editing completed');
+                          resolve();
+                      }, 0)
+
+                  	})
+                  }
+                     function postPhoto() {
+                      console.log('photo successfully posted');
+                  }
+
+            //task part//
+                  askMoney(33)
+                  .then(function(data){
+                  	console.log('success in askMoney>>',data);
+                  	return buyPhone('s10')
+
+                  })
+                  .then(function(data){
+                  	console.log('success in buyPhone>>',data);
+                  	var a = takePhoto();
+                      console.log('non blocking');
+
+                  })
+                  .then(function(){
+                  	console.log('success in takePhoto');
+                  	return edit();
+                  })
+                  .then(function(){
+                  	console.log('success in edit');
+                  	postphoto();
+                  })
+
+
+                  .catch(function(err){
+                  	console.log('err in promise>>',err);
+                  })
+                  console.log('eat momo');
+    </script>
+  </head>
+</html>
