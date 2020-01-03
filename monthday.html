@@ -1,0 +1,43 @@
+<html>
+    <head>
+      <script>
+        var monthname = new Date();
+        var month = monthname.getMonth();
+        var day = monthname.getDay();
+        console.log(getMonthName(month) + " " + getDayName(day));
+
+        function getMonthName(monthnum) {
+          var monthnames = [
+            "january",
+            "februry",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december"
+          ];
+
+          return monthnames[monthnum];
+        }
+        function getDayName(dayname) {
+          var Dayname = [
+            "sunday",
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thusday",
+            "friday",
+            "saturday"
+          ];
+
+          return Dayname[dayname];
+        }
+      </script>
+    </head>
+    <body></body>
+  </html>
